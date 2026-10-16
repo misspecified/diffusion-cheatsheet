@@ -17,7 +17,7 @@ Denote the density of $x_\sigma$ by $p_\sigma$.
 The expected value of $x_0$, given an observation of $x_\sigma$, can be calculated using only $x_\sigma$, $\sigma$, and $p_\sigma$.
 
 $$
-\mathbb{E}[x_0 \mid x_\sigma] = x_\sigma + \sigma^2 \frac{p'_\sigma(x_\sigma)}{p_\sigma(x_\sigma)} \tag{1}
+\mathbb{E}[x_0 \mid x_\sigma] = x_\sigma + \sigma^2 \frac{p'_\sigma(x_\sigma)}{p_\sigma(x_\sigma)} \qquad (1)
 $$
 
 [Proof](proofs/tweedies-formula-1d.md)

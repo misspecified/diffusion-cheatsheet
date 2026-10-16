@@ -8,7 +8,7 @@ $$
 &= \int x_0 \frac{p(x_\sigma \mid x_0) p_0(x_0)}{p_\sigma(x_\sigma)} dx_0 \\
 &= \frac{\int x_0 N(x_\sigma; x_0, \sigma^2) p_0(x_0) dx_0}{p_\sigma(x_\sigma)}
 \end{aligned}
-\tag{2}
+\qquad (2)
 $$
 
 Consider $p_\sigma(x_\sigma)$ separately. By the definition of $x_\sigma$ as a sum of two independent variables:

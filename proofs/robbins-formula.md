@@ -8,7 +8,7 @@ $$
 &= \int \theta \frac{\operatorname{Pois}(x; \theta) g(\theta)}{p(x)} d\theta \\
 &= \frac{\int \theta \operatorname{Pois}(x; \theta) g(\theta) d\theta}{p(x)}
 \end{aligned}
-\tag{3}
+\qquad (3)
 $$
 
 By definition:
