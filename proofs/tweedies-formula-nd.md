@@ -11,7 +11,7 @@ $$
 \qquad (4)
 $$
 
-Consider $p_\sigma(\mathbf{x}_\sigma)$ separately. By the definition of $\mathbf{x}_\sigma$ as a sum of two independent variables:
+Consider $`p_\sigma(\mathbf{x}_\sigma)`$ separately. By the definition of $`\mathbf{x}_\sigma`$ as a sum of two independent variables:
 
 $$
 \begin{aligned}

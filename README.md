@@ -43,7 +43,7 @@ Note the similarities to (1). We can estimate the latent $\theta$ value using on
 ## Setup: additive Gaussian noise in $n$ dimensions
 
 
-$\mathbf{x}_0$ is a real-valued vector quantity with density $p_0$. We consider the situation where we can only observe $\mathbf{x}_\sigma$, a *noisy* observation of $\mathbf{x}_0$:
+$`\mathbf{x}_0`$ is a real-valued vector quantity with density $p_0$. We consider the situation where we can only observe $`\mathbf{x}_\sigma`$, a *noisy* observation of $`\mathbf{x}_0`$:
 
 $$
 \mathbf{x}_\sigma = \mathbf{x}_0 + \boldsymbol{\varepsilon}, \qquad \boldsymbol{\varepsilon} \sim N(\mathbf{0}, \Sigma) \text{ independent of } \mathbf{x}_0,
@@ -51,11 +51,11 @@ $$
 
 where the symmetric, positive-definite matrix $\Sigma$ is known.
 
-Denote the density of $\mathbf{x}_\sigma$ by $p_\sigma$.
+Denote the density of $`\mathbf{x}_\sigma`$ by $p_\sigma$.
 
 ### Tweedie's formula
 
-The expected value of $\mathbf{x}_0$, given an observation of $\mathbf{x}_\sigma$, can be calculated using only $\mathbf{x}_\sigma$, $\Sigma$, and $p_\sigma$.
+The expected value of $`\mathbf{x}_0`$, given an observation of $`\mathbf{x}_\sigma`$, can be calculated using only $`\mathbf{x}_\sigma`$, $\Sigma$, and $p_\sigma$.
 
 $$
 \mathbb{E}[\mathbf{x}_0 \mid \mathbf{x}_\sigma] = \mathbf{x}_\sigma + \Sigma \frac{\nabla_{\mathbf{x}_\sigma}  p_\sigma(\mathbf{x}_\sigma)}{p_\sigma(\mathbf{x}_\sigma)} \qquad (5)
