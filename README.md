@@ -17,10 +17,23 @@ Denote the density of $x_\sigma$ by $p_\sigma$.
 The expected value of $x_0$, given an observation of $x_\sigma$, can be calculated using only $x_\sigma$, $\sigma$, and $p_\sigma$.
 
 $$
-\mathbb{E}[x_0 \mid x_\sigma] = x_\sigma + \sigma^2 \frac{p'_\sigma(x_\sigma)}{p_\sigma(x_\sigma)}
+\mathbb{E}[x_0 \mid x_\sigma] = x_\sigma + \sigma^2 \frac{p'_\sigma(x_\sigma)}{p_\sigma(x_\sigma)} \tag{1}
 $$
 
 [Proof](proofs/tweedies-formula-1d.md)
 
-This is a convenient property since it allows us to estimate $x_0$ using only the distribution of the noisy observations without knowing $p_0$.
+This is a convenient property since it allows us to estimate $x_0$ using only the distribution of the noisy observations, without knowing $p_0$.
 
+#### Aside: Robbins' formula
+
+$x$ is a count with $x \mid \theta \sim \text{Poisson}(\theta)$. Suppose also that we have a $\theta \sim g$ prior. Let $p$ be the marginal pmf of $x$.
+
+Then:
+
+$$
+\mathbb{E}[\theta \mid x] = (x + 1) \frac{p(x + 1)}{p(x)}
+$$
+
+[Proof](proofs/robbins-formula.md)
+
+Note the similarities to (1). We can estimate the latent $\theta$ value using only the distribution of the observations, without knowing $g$. In addition, we only depend on $p$ through $p(x + 1)$ and $p(x)$, which is the discrete equivalent of only depending on $p$ and $p'$.
