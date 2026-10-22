@@ -44,6 +44,7 @@ $$
 \begin{aligned}
 \mathbb{E}[\mathbf{x}_0 \mid \mathbf{x}_\sigma]
 &= \frac{\mathbf{x}_\sigma p_{\sigma}(\mathbf{x}_\sigma) + \Sigma \nabla_{\mathbf{x}_\sigma} p_\sigma(\mathbf{x}_\sigma)}{p_\sigma(\mathbf{x}_\sigma)} \\
-&= \mathbf{x}_\sigma + \Sigma \frac{\nabla_{\mathbf{x}_\sigma} p_\sigma(\mathbf{x}_\sigma)}{p_\sigma(\mathbf{x}_\sigma)}
+&= \mathbf{x}_\sigma + \Sigma \frac{\nabla_{\mathbf{x}_\sigma} p_\sigma(\mathbf{x}_\sigma)}{p_\sigma(\mathbf{x}_\sigma)} \\
+&= \mathbf{x}_\sigma + \Sigma \nabla_{\mathbf{x}_\sigma} \log p_\sigma(\mathbf{x}_\sigma) 
 \end{aligned}
 $$

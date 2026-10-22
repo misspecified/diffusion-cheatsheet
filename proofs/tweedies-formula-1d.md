@@ -44,6 +44,7 @@ $$
 \begin{aligned}
 \mathbb{E}[x_0 \mid x_\sigma]
 &= \frac{x_\sigma p_{\sigma}(x_\sigma) + \sigma^2 p'_\sigma(x_\sigma)}{p_\sigma(x_\sigma)} \\
-&= x_\sigma + \sigma^2 \frac{p'_\sigma(x_\sigma)}{p_\sigma(x_\sigma)}
+&= x_\sigma + \sigma^2 \frac{p'_\sigma(x_\sigma)}{p_\sigma(x_\sigma)} \\
+&= x_\sigma + \sigma^2 \frac{d}{dx_\sigma} \log p_\sigma(x_\sigma) 
 \end{aligned}
 $$
