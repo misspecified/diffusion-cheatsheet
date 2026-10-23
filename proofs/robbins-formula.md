@@ -6,7 +6,7 @@ $$
 \begin{aligned}
 \mathbb{E}[\theta \mid x]
 &= \int \theta \frac{\mathrm{Pois}(x; \theta) g(\theta)}{p(x)} d\theta \\
-&= \frac{\int \theta \, \mathrm{Pois}(x; \theta) g(\theta) d\theta}{p(x)}
+&= \frac{\int \theta \thinspace \mathrm{Pois}(x; \theta) g(\theta) d\theta}{p(x)}
 \end{aligned}
 \qquad (3)
 $$
@@ -21,7 +21,7 @@ Then:
 
 $$
 \begin{aligned}
-\int \theta \, \mathrm{Pois}(x; \theta) g(\theta) d\theta
+\int \theta \thinspace \mathrm{Pois}(x; \theta) g(\theta) d\theta
 &= \int \frac{\theta^{x + 1} e^{-\theta}}{x!} g(\theta) d\theta \\
 &= (x + 1) \int \frac{\theta^{x + 1} e^{-\theta}}{(x + 1)!} g(\theta) d\theta \\
 &= (x + 1) p(x + 1)

@@ -40,7 +40,7 @@ We are minimising pointwise, so differentiate with respect to $`D(\mathbf{x}_\si
 
 $$
 \begin{aligned}
-\nabla_D \, D(\mathbf{x}_\sigma; \sigma)^\top \left( D(\mathbf{x}_\sigma; \sigma) - 2 \mathbb{E}[\mathbf{x}_0 \mid \mathbf{x}_\sigma] \right)
+\nabla_D \thinspace D(\mathbf{x}_\sigma; \sigma)^\top \left( D(\mathbf{x}_\sigma; \sigma) - 2 \mathbb{E}[\mathbf{x}_0 \mid \mathbf{x}_\sigma] \right)
 &= 2 D(\mathbf{x}_\sigma; \sigma) - 2 \mathbb{E}[\mathbf{x}_0 \mid \mathbf{x}_\sigma] \\
 &= \mathbf{0}
 \end{aligned}
