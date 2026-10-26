@@ -1,4 +1,4 @@
-Assume the setup as in [Choosing $c_{\text{in}}$, $c_{\text{out}}$, $c_{\text{skip}}$](../README.md#choosing-c_textin-c_textout-c_textskip).
+Assume the setup as in [Preconditioning](../README.md#preconditioning).
 
 We want:
 

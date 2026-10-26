@@ -124,7 +124,7 @@ $$
 
 Therefore, $F_\theta$ can be fit on squared loss with target $`\frac{\mathbf{x}_0 - c_{\text{skip}}(\sigma) \mathbf{x}_\sigma}{c_{\text{out}}(\sigma)}`$.
 
-#### Choosing $c_{\text{in}}$, $c_{\text{out}}$, $c_{\text{skip}}$
+#### Preconditioning
 
 Neural networks behave best when their inputs and targets are on the same scale (e.g. both unit variance).
 Additionally, we want $c_{\text{out}}(\sigma)$ to be small, since this scales down the errors in $F_\theta$.
@@ -132,11 +132,15 @@ Suppose that $\text{Var}(x_{0,i}) = \sigma_{\text{data}}^2$ and $\Sigma_{ii} = 1
 Imposing these properties gives:
 
 $$
-\begin{aligned}
-c_{\text{in}}(\sigma) &= \frac{1}{\sqrt{\sigma_{\text{data}}^2 + \sigma^2}} \\[1em]
-c_{\text{out}}(\sigma) &= \frac{\sigma \sigma_{\text{data}}}{\sqrt{\sigma_{\text{data}}^2 + \sigma^2}} \\[1em]
-c_{\text{skip}}(\sigma) &= \frac{\sigma_{\text{data}}^2}{\sigma_{\text{data}}^2 + \sigma^2}
-\end{aligned}
+c_{\text{in}}(\sigma) = \frac{1}{\sqrt{\sigma_{\text{data}}^2 + \sigma^2}}
+$$
+
+$$
+c_{\text{out}}(\sigma) = \frac{\sigma \sigma_{\text{data}}}{\sqrt{\sigma_{\text{data}}^2 + \sigma^2}}
+$$
+
+$$
+c_{\text{skip}}(\sigma) = \frac{\sigma_{\text{data}}^2}{\sigma_{\text{data}}^2 + \sigma^2}
 $$
 
 
