@@ -145,3 +145,35 @@ $$
 
 
 [Proof](proofs/sensible-choices-of-c.md)
+
+## Sampling
+
+### Aim
+
+The aim is to use the ideas above to draw a random sample from a complex distribution $p_0$. Two applications:
+
+* generating realistic-looking images;
+* generating statistically realistic weather forecasts, as in GenCast.
+
+We have just seen how to train a denoiser that approximates $`\mathbb{E}[\mathbf{x}_0 \mid \mathbf{x}_\sigma]`$ by minimising a squared loss with a sensible target.
+This doesn't immediately give us a way to sample from $p_0$. The overall idea is to:
+
+1. draw a sample from $p_\sigma$ for a large $\sigma$, where it is close to pure noise;
+2. refine it repeatedly, lowering $\sigma$ each time, until it is a sample from $p_0$.
+
+Each refinement step must turn a sample from $p_\sigma$ into a sample from $p_{\sigma'}$ at the next, lower noise level.
+Simply applying the denoiser does not do this: it returns the posterior mean, not a sample.
+
+#### ODE formulation
+
+To keep things easy to visualise, we work in the [1-dimensional setup](#setup-additive-gaussian-noise-in-1-dimension).
+Since $\sigma$ will now vary continuously, we write the density of $x_{\sigma}$ as $p(x; \sigma)$ rather than $p_{\sigma}$.
+
+
+We can show that:
+
+$$
+\frac{\partial p}{\partial \sigma} = \sigma \frac{\partial^2 p}{\partial x^2} \qquad (9)
+$$
+
+[Proof](proofs/how-p-varies-with-sigma.md)
