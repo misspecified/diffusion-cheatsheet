@@ -177,3 +177,11 @@ $$
 $$
 
 [Proof](proofs/how-p-varies-with-sigma.md)
+
+Now suppose each sample moves according to the ODE $\frac{dx}{d\sigma} = v(x, \sigma)$ for some smooth function $v$, and let $q(x; \sigma)$ be the density of the moving samples at level $\sigma$. The continuity equation says that:
+
+$$
+\frac{\partial q}{\partial \sigma} = -\frac{\partial}{\partial x} (v q) \qquad (12)
+$$
+
+This is a standard result in fluid dynamics; here is a [sketch proof](proofs/continuity-equation.md).
