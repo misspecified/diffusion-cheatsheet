@@ -6,7 +6,7 @@ $$
 \frac{\partial q}{\partial \sigma} = -\frac{\partial}{\partial x} (v q)
 $$
 
-Fix a point $`(\sigma^*, x^*)`$, and let $a(\sigma)$ be the trajectory of a sample passing through it, so that $`a(\sigma^*) = x^*`$ and $a'(\sigma) = v(a(\sigma), \sigma)$. This trajectory is fully determined by the ODE and the point. Therefore, different trajectories cannot cross. If they intersected at some point, following the velocity forwards and backwards would leave us on identical curves.
+Fix a point $`(\sigma^{\ast}, x^{\ast})`$, and let $a(\sigma)$ be the trajectory of a sample passing through it, so that $`a(\sigma^{\ast}) = x^{\ast}`$ and $a'(\sigma) = v(a(\sigma), \sigma)$. This trajectory is fully determined by the ODE and the point. Therefore, different trajectories cannot cross. If they intersected at some point, following the velocity forwards and backwards would leave us on identical curves.
 
 ![Trajectories visualisation](../figures/continuity-equation-trajectories.png)
 
@@ -32,13 +32,13 @@ $$
 \frac{\partial Q}{\partial \sigma} = \frac{\partial}{\partial \sigma} \int_{-\infty}^x q(x'; \sigma) dx' = \int_{-\infty}^x \frac{\partial}{\partial \sigma} q(x'; \sigma) dx'
 $$
 
-Substituting these into the chain rule, and evaluating at $`\sigma = \sigma^*`$, where $`a(\sigma^*) = x^*`$ and $`a'(\sigma^*) = v(x^*, \sigma^*)`$:
+Substituting these into the chain rule, and evaluating at $`\sigma = \sigma^{\ast}`$, where $`a(\sigma^{\ast}) = x^{\ast}`$ and $`a'(\sigma^{\ast}) = v(x^{\ast}, \sigma^{\ast})`$:
 
 $$
-v(x^*, \sigma^*) q(x^*; \sigma^*) + \int_{-\infty}^{x^*} \frac{\partial}{\partial \sigma} q(x'; \sigma^*) dx' = 0
+v(x^{\ast}, \sigma^{\ast}) q(x^{\ast}; \sigma^{\ast}) + \int_{-\infty}^{x^{\ast}} \frac{\partial}{\partial \sigma} q(x'; \sigma^{\ast}) dx' = 0
 $$
 
-Since $`(\sigma^*, x^*)`$ was arbitrary, this holds at every point $(\sigma, x)$:
+Since $`(\sigma^{\ast}, x^{\ast})`$ was arbitrary, this holds at every point $(\sigma, x)$:
 
 $$
 v(x, \sigma) q(x; \sigma) + \int_{-\infty}^{x} \frac{\partial}{\partial \sigma} q(x'; \sigma) dx' = 0
